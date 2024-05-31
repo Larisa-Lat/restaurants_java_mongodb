@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="600.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxwithmongodb.RestaurantsController">
+   <children>
+      <TableView fx:id="restaurantsTableView" layoutX="79.0" layoutY="59.0" prefHeight="502.0" prefWidth="1020.0">
+        <columns>
+          <TableColumn fx:id="nameColumn" prefWidth="146.0000228881836" text="Name" />
+          <TableColumn fx:id="scoreColumn" prefWidth="141.99998474121094" text="Average rating" />
+            <TableColumn fx:id="boroughColumn" prefWidth="126.00006103515625" text="Borough" />
+            <TableColumn fx:id="cuisineColumn" prefWidth="222.66671752929688" text="Cuisine" />
+            <TableColumn fx:id="streetColumn" prefWidth="246.6666259765625" text="Street" />
+            <TableColumn fx:id="buildingColumn" prefWidth="140.6666259765625" text="Building" />
+        </columns>
+      </TableView>
+      <Label layoutX="79.0" layoutY="29.0" text="Search Reastaurant" />
+   </children>
+</AnchorPane>

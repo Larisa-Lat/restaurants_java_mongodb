@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.javafxwithmongodb.CuisinesController"
+            prefHeight="400.0" prefWidth="600.0">
+    <children>
+        <ComboBox fx:id="comboBox" layoutX="80.0" layoutY="103.0" prefHeight="52.0" prefWidth="247.0" />
+        <Button layoutX="396.0" layoutY="103.0" mnemonicParsing="false" onMouseClicked="#getComboBoxInfo" prefHeight="52.0" prefWidth="123.0" text="Submit" />
+        <Label layoutX="80.0" layoutY="53.0" prefHeight="31.0" prefWidth="134.0" text="Select borough:" />
+        <Button layoutX="396.0" layoutY="183.0" mnemonicParsing="false" onMouseClicked="#nextRestaurants" prefHeight="52.0" prefWidth="123.0" text="Let's choose cuisine" />
+    </children>
+</AnchorPane>
