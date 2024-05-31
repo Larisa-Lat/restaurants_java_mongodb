@@ -24,13 +24,12 @@ import static com.sun.javafx.reflect.FieldUtil.getField;
 public class DBConnect{
     private MongoClient client;
     private MongoDatabase db;
-    private MongoCredential auth;
+
     private MongoCollection<Document> restaurants;
     public DBConnect(){
         try{
             client = new MongoClient("localhost", 27017);
             db = client.getDatabase("restaurants");
-            auth = MongoCredential.createCredential("myUserAdmin", "test", "Zlyuka13!".toCharArray());
             restaurants = db.getCollection("restaurants");
         }
         catch(Exception e){
@@ -45,10 +44,7 @@ public class DBConnect{
         List<String> boroughs = new ArrayList<String>();
         String data;
         try{
-            // Create a query
-//            Bson query = Filters.eq("age", 25);
 
-//            Bson filter = Filters.empty();
 
             Bson projection = fields(include("borough"), exclude("_id"));
 
@@ -57,13 +53,10 @@ public class DBConnect{
 
             // Iterate over the cursor and process the documents
             while (cursor.hasNext()) {
-//                Document document = cursor.next();
                 data = cursor.next().get("borough").toString();
                 if(!boroughs.contains(data)) {
                     boroughs.add(data);
                 }
-                // Process the document
-//                System.out.println(document.toJson());
             }
         }
         catch(Exception e){
@@ -121,12 +114,10 @@ public class DBConnect{
                     computed("street", "$info.street"),
                     computed("building", "$info.building")));
             Bson sort = Aggregates.sort(descending("avg_grade"));
-            Bson limit = Aggregates.limit(30);
 
             List<Document> results = restaurants.aggregate(List.of(
                     match1, match2, unwind_grades, unwind_address, group, unwind_info, project, sort)).into(new ArrayList<>());
 
-            System.out.println(results);
 
             for (int i = 0; i < results.size(); i += 1) {
                 data = results.get(i);
@@ -135,7 +126,6 @@ public class DBConnect{
 
                     String _name = data.get("name").toString();
                     int _score = Math.round(Float.parseFloat(data.get("avg_grade").toString()));
-                    System.out.println(_score);
                     String _borough = data.get("borough").toString();
                     String _cuisine = data.get("cuisine").toString();
                     String _street = data.get("street").toString();

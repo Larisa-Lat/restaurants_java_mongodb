@@ -7,7 +7,7 @@ public class Restaurants {
     private String cuisine;
     private String building;
     private String street;
-    public Restaurants(String name, int score, String borough, String cuisine, String building, String street){
+    public Restaurants(String name, int score, String borough, String cuisine, String street, String building){
         this.name = name;
         this.score = score;
         this.borough = borough;

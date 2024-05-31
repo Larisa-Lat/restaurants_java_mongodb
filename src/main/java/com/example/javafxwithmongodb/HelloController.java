@@ -10,12 +10,9 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class HelloController {
-    @FXML
-    private Label welcomeText;
 
     @FXML
     void onHelloButtonClick() throws IOException {
-//        welcomeText.setText("Welcome to JavaFX Application !");
         HelloApplication.changeScene("boroughs.fxml");
     }
 
