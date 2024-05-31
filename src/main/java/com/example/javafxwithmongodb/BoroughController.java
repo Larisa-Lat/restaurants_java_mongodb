@@ -38,7 +38,7 @@ public class BoroughController implements Initializable {
         if (borough != null && !borough.isEmpty()){
             HelloApplication.changeScene("cuisines.fxml");
         }else {
-            alertText.setText("Submit borough!");
+            alertText.setText("Сhoose and submit borough!");
         }
     }
 

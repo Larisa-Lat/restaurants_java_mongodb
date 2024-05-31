@@ -5,6 +5,7 @@ import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
 
 import java.io.IOException;
 import java.net.URL;
@@ -12,6 +13,8 @@ import java.util.ResourceBundle;
 
 
 public class CuisinesController implements Initializable {
+    @FXML
+    public Label alertText;
     private static String cuisine;
 
     @FXML
@@ -33,6 +36,8 @@ public class CuisinesController implements Initializable {
     void nextRestaurants() throws IOException {
         if (cuisine != null && !cuisine.isEmpty()){
             HelloApplication.changeScene("restaurants.fxml");
+        }else {
+            alertText.setText("Сhoose and submit cuisine!");
         }
     }
     public static String getCuisine(){

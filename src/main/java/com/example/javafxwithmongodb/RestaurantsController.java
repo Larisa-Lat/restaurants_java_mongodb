@@ -4,6 +4,7 @@ import data.DBConnect;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 
@@ -15,6 +16,9 @@ import data.Restaurants;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 public class RestaurantsController implements Initializable {
+
+    @FXML
+    public Label whichRestaurants;
     @FXML
     private TableView<Restaurants> restaurantsTableView;
 
@@ -33,9 +37,11 @@ public class RestaurantsController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle){
+
         DBConnect connect = HelloApplication.getConnect();
         String borough = BoroughController.getBorough();
         String cuisine = CuisinesController.getCuisine();
+        whichRestaurants.setText("Restaurants in " + borough + " with cuisine " + cuisine + ".");
         List<Restaurants> restaurants = connect.getRestaurants(borough,cuisine);
 
         nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));

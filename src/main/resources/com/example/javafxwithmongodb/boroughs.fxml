@@ -11,6 +11,6 @@
       <Button layoutX="396.0" layoutY="103.0" mnemonicParsing="false" onMouseClicked="#getComboBoxInfo" prefHeight="52.0" prefWidth="123.0" text="Submit" />
       <Label layoutX="80.0" layoutY="53.0" prefHeight="31.0" prefWidth="134.0" text="Select borough:" />
       <Button layoutX="396.0" layoutY="183.0" mnemonicParsing="false" onMouseClicked="#nextCuisines" prefHeight="52.0" prefWidth="123.0" text="Let's choose cuisine" />
-      <Label fx:id="alertText" layoutX="451.0" layoutY="75.0" prefHeight="17.0" prefWidth="13.0" textFill="#d70e0e" />
+      <Label fx:id="alertText" ellipsisString="" layoutX="372.0" layoutY="72.0" prefHeight="23.0" prefWidth="171.0" textFill="#d70e0e" />
    </children>
 </AnchorPane>

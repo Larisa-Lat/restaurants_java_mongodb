@@ -17,6 +17,6 @@
             <TableColumn fx:id="buildingColumn" prefWidth="140.6666259765625" text="Building" />
         </columns>
       </TableView>
-      <Label layoutX="30.0" layoutY="24.0" text="Search Reastaurant" />
+      <Label fx:id="whichRestaurants" ellipsisString="" layoutX="30.0" layoutY="18.0" prefHeight="23.0" prefWidth="1020.0" />
    </children>
 </AnchorPane>
