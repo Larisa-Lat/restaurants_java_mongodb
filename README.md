@@ -10,14 +10,19 @@
 ## Выбор района
 Пользователь должен выбрать район из выпадающего списка.
 Список районов получен из датабазы restaurants.
+
 <img width="478" alt="Borough1" src="https://github.com/Larisa-Lat/restaurants_java_mongodb/assets/80693001/7d0b3fb3-f461-4b70-8ed3-53d81d21bbf2">
+
 Если пользователь не выбрал район - то появиться подпись с прособой выбрать.
+
 <img width="478" alt="Borough1" src="https://github.com/Larisa-Lat/restaurants_java_mongodb/assets/80693001/7d0b3fb3-f461-4b70-8ed3-53d81d21bbf2">
 
 ## Выбор кухни
 Пользователь должен выбрать кухню из выпадающего списка.
 Список кухнь в районе выбранном пользвателем ранее.
+
 <img width="478" alt="Cuisine1" src="https://github.com/Larisa-Lat/restaurants_java_mongodb/assets/80693001/6bc1244b-6353-4711-ae9a-4d23153548a7">
+
 Аналогично как и в предыдущем окне, если пользователь не выбрал кухню - то появиться подпись с прособой выбрать.
 ## Вывод ресторанов
 Вывод пользователю таблицы ресторанов в выбранном ранее районе и кухне.
@@ -30,4 +35,5 @@
 - номер здания
 
 Таблица отсортирована в порядке убывания по колонке средний бал ресторана.
+
 <img width="832" alt="Restaurants" src="https://github.com/Larisa-Lat/restaurants_java_mongodb/assets/80693001/80ed432d-ec6c-44f0-9b47-c7867323b178">
