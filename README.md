@@ -15,7 +15,7 @@
 
 Если пользователь не выбрал район - то появиться подпись с прособой выбрать.
 
-<img width="478" alt="Borough1" src="https://github.com/Larisa-Lat/restaurants_java_mongodb/assets/80693001/7d0b3fb3-f461-4b70-8ed3-53d81d21bbf2">
+<img width="482" alt="Borough2" src="https://github.com/Larisa-Lat/restaurants_java_mongodb/assets/80693001/5ea0104c-fc91-426e-b923-de2ddcfe868a">
 
 ## Выбор кухни
 Пользователь должен выбрать кухню из выпадающего списка.
