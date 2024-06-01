@@ -37,11 +37,7 @@ public class HelloApplication extends Application {
     public static DBConnect getConnect(){
         return connect;
     }
-    public static void closeConnect(){
-        connect.closeDbConnect();
-    }
-
-
+    public static void closeDBConnect(){connect.closeDbConnect();}
 
     public static void main(String[] args) {
         launch();
