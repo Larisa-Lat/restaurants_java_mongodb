@@ -41,8 +41,9 @@ public class RestaurantsController implements Initializable {
         DBConnect connect = HelloApplication.getConnect();
         String borough = BoroughController.getBorough();
         String cuisine = CuisinesController.getCuisine();
-        whichRestaurants.setText("Restaurants in " + borough + " with cuisine " + cuisine + ".");
+        whichRestaurants.setText(cuisine + " restaurants in " + borough + ".");
         List<Restaurants> restaurants = connect.getRestaurants(borough,cuisine);
+        connect.closeDbConnect();
 
         nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
         scoreColumn.setCellValueFactory(new PropertyValueFactory<>("score"));

@@ -27,17 +27,14 @@ public class CuisinesController implements Initializable {
         comboBox.setItems(FXCollections.observableArrayList(connect.getCuisine(borough)));
     }
 
-    @FXML
-    public void getComboBoxInfo(){
-        cuisine = comboBox.getValue();
-    }
 
     @FXML
     void nextRestaurants() throws IOException {
+        cuisine = comboBox.getValue();
         if (cuisine != null && !cuisine.isEmpty()){
             HelloApplication.changeScene("restaurants.fxml");
         }else {
-            alertText.setText("Сhoose and submit cuisine!");
+            alertText.setText("Сhoose cuisine!");
         }
     }
     public static String getCuisine(){

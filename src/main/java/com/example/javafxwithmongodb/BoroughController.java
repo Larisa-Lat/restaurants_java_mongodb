@@ -28,17 +28,14 @@ public class BoroughController implements Initializable {
         comboBox.setItems(FXCollections.observableArrayList(connect.getBoroughs()));
     }
 
-    @FXML
-    public void getComboBoxInfo(){
-        borough = comboBox.getValue();
-    }
 
     @FXML
     void nextCuisines() throws IOException {
+        borough = comboBox.getValue();
         if (borough != null && !borough.isEmpty()){
             HelloApplication.changeScene("cuisines.fxml");
         }else {
-            alertText.setText("Сhoose and submit borough!");
+            alertText.setText("Сhoose borough!");
         }
     }
 
